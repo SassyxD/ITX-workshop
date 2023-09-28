@@ -7,5 +7,12 @@ generator client {
 
 datasource db {
   provider = "postgresql"
-  url      = env("DATABASE_URL")
+  url      = env("DATABASE_URLpostgresql://cln35pedl000wbsmna94s2yhe:BYU4wsffiLbhgxhoXBafR5s7@161.246.127.24:9094/cln35pedm000ybsmnhxng407r")
+}
+
+model Room {
+  id              Int @id @default(autoincrement())
+  room_id         Int
+  status          Boolean
+  user            String  
 }
